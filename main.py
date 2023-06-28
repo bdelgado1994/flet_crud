@@ -16,11 +16,9 @@ class Youclass(UserControl):
 
     # Life Cicle For Call Render
     def did_mount(self):
-        print("HE salido del Build")
         self.renderAll()
 
     def build(self):
-        print("Soy el build")
         return Column(
             [
                 Text(value="CRUD SQLite", size=30),
@@ -145,6 +143,7 @@ class Youclass(UserControl):
 def main(page: Page):
     page.update()
     yourclass = Youclass()
+    page.theme_mode = "light"
     page.add(yourclass)
 
 
